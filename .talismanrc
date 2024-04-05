@@ -13,4 +13,12 @@ fileignoreconfig:
   - filecontent
 - filename: .github/workflows/go-release.yml
   checksum: 3608a592f8d8fbfd7ddfad1696cb0e52f64ed3e328f827584511bf58ab976006
+- filename: go.sum
+  checksum: 930a471ec4044bfbf21bcd33c071db85ce4876ec5d2670edd8b2741605c4e32e
+- filename: internal/provider/provider.go
+  checksum: b9ed8ec6f93514af3f70ab7b32d23a40f77d4f7f3b5e49779f1c9d73126a4f96
+- filename: internal/provider/blindfold_resource.go
+  checksum: 805ab23b20a1a0055cbf5260350c811ac5c16aa722067d889232826b2ba2736d
+- filename: internal/provider/blindfold_file_resource.go
+  checksum: 61306037adfed5d85bc6040ec7689d1c1be1f626b68a06c74a2948a606eb652f
 version: "1.0"
