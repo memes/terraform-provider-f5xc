@@ -14,15 +14,11 @@ permissions:
 
 jobs:
   release-please:
-    # TODO: @memes - enable in real go project
-    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Release Please
         uses: GoogleCloudPlatform/release-please-action@v4.1.0
         with:
           release-type: go
-          package-name: go-template
-          # TODO @memes - If other actions are not going to be triggered by the
-          # result of this action this can be removed.
+          package-name: terraform-provider-f5xc
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}

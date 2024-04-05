@@ -3,12 +3,6 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - memes
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

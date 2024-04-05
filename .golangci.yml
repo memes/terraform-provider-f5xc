@@ -14,7 +14,8 @@ linters:
     - deadcode
     - depguard
     - dogsled
-    - dupl
+    # Disabled by @memes; resources have a lot of boilerplate
+    # - dupl
     - durationcheck
     - errcheck
     - errorlint
@@ -62,7 +63,6 @@ linters:
     - whitespace
     - wrapcheck
 linters-settings:
-  # TODO @memes - update the list of allowed imports
   depguard:
     rules:
       main:
@@ -72,12 +72,18 @@ linters-settings:
         allow:
           - $gostd
           - github.com/memes
+          - github.com/google/uuid
+          - github.com/hashicorp/terraform-plugin-framework
+          - github.com/hashicorp/terraform-plugin-log
       test:
         files:
           - $test
         allow:
           - $gostd
           - github.com/memes
+          - github.com/hashicorp/terraform-plugin-framework
+          - github.com/hashicorp/terraform-plugin-go
+          - github.com/hashicorp/terraform-plugin-testing
   errcheck:
     check-type-assertions: true
     check-blank: true

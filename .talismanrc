@@ -11,4 +11,6 @@ fileignoreconfig:
 - filename: README.md
   ignore_detectors:
   - filecontent
+- filename: .github/workflows/go-release.yml
+  checksum: 3608a592f8d8fbfd7ddfad1696cb0e52f64ed3e328f827584511bf58ab976006
 version: "1.0"
