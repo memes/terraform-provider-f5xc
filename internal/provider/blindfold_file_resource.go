@@ -43,7 +43,7 @@ func NewBlindfoldFileResource() resource.Resource {
 
 // Implement the Metadata function for Resource interface.
 func (r *blindfoldFileResource) Metadata(_ context.Context, req resource.MetadataRequest, resp *resource.MetadataResponse) {
-	resp.TypeName = req.ProviderTypeName + "_blindfold"
+	resp.TypeName = req.ProviderTypeName + "_blindfold_file"
 }
 
 // Implement the Schema function for Resource interface. Blindfold resources are configured to accept plaintext data,
