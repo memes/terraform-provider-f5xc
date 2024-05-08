@@ -3,6 +3,7 @@
     "version": "0.2",
     "language": "en",
     "words": [
+        "creds",
         "datasource",
         "datasources",
         "direnv",
@@ -29,6 +30,7 @@
         "providerserver",
         "stringplanmodifier",
         "tflog",
+        "tfplugindocs",
         "tfprotov",
         "tfsdk",
         "thumbsup",

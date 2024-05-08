@@ -14,11 +14,21 @@ fileignoreconfig:
 - filename: .github/workflows/go-release.yml
   checksum: 3608a592f8d8fbfd7ddfad1696cb0e52f64ed3e328f827584511bf58ab976006
 - filename: go.sum
-  checksum: 930a471ec4044bfbf21bcd33c071db85ce4876ec5d2670edd8b2741605c4e32e
+  checksum: 2cb99db62703c6194def14d7be61dc6bde3ab743ff12baf73b9e67bb3b0002f0
 - filename: internal/provider/provider.go
-  checksum: b9ed8ec6f93514af3f70ab7b32d23a40f77d4f7f3b5e49779f1c9d73126a4f96
+  checksum: 062e1d6c0a15756baed3195e2579a922f6f49937371623117d1e7513dde79b8e
 - filename: internal/provider/blindfold_resource.go
   checksum: 805ab23b20a1a0055cbf5260350c811ac5c16aa722067d889232826b2ba2736d
 - filename: internal/provider/blindfold_file_resource.go
   checksum: 61306037adfed5d85bc6040ec7689d1c1be1f626b68a06c74a2948a606eb652f
+- filename: docs/index.md
+  checksum: 62b9c884c962b2f85eb0514e1ecde148befe43ac4fbaa278f6daaa67dd53f686
+- filename: docs/resources/blindfold.md
+  checksum: becc66378b1e312a07b687e8f5fd6683cc452bba22712651705d41d014c9d699
+- filename: examples/provider/provider_x509.tf
+  checksum: 7e07f5143e80bef1a6f4710156d5727ec153270e4de012169d8e1400823d6ad0
+- filename: templates/index.md.tmpl
+  checksum: 517977bf7f4fc50a1dc7d1a1f2d5e021b3a7eccefbe46334298110d9aa57e98c
+- filename: examples/resources/f5xc_blindfold/resource.tf
+  checksum: 62a0f82aea4d47bfea5de0e8bd831e20b600461778c27a6a47eed1fcf534b125
 version: "1.0"
