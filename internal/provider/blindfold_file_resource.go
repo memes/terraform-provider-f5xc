@@ -51,6 +51,8 @@ func (r *blindfoldFileResource) Metadata(_ context.Context, req resource.Metadat
 // policy document. A definitive path to vesctl can be provided as an option.
 func (r *blindfoldFileResource) Schema(_ context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		MarkdownDescription: "Generates a blindfolded secret from a local file.\n\n" +
+			"This resource does **NOT** add the content of the file to Terraform state.",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Description: "The computed resource identifier for the blindfolded secret.",
@@ -75,14 +77,14 @@ func (r *blindfoldFileResource) Schema(_ context.Context, _ resource.SchemaReque
 				Required: true,
 				Attributes: map[string]schema.Attribute{
 					"name": schema.StringAttribute{
-						Description: "The name of the F5XC PolicyDocument to use for blindfold.",
+						Description: "The name of the PolicyDocument to use for blindfold.",
 						Required:    true,
 						PlanModifiers: []planmodifier.String{
 							stringplanmodifier.RequiresReplace(),
 						},
 					},
 					"namespace": schema.StringAttribute{
-						Description: "The namespace of the F5XC PolicyDocument to use for blindfold.",
+						Description: "The namespace of the PolicyDocument to use for blindfold.",
 						Required:    true,
 						PlanModifiers: []planmodifier.String{
 							stringplanmodifier.RequiresReplace(),
@@ -91,8 +93,9 @@ func (r *blindfoldFileResource) Schema(_ context.Context, _ resource.SchemaReque
 				},
 			},
 			"vesctl": schema.StringAttribute{
-				Description: "The path to vesctl binary.",
-				Optional:    true,
+				MarkdownDescription: "The path to `vesctl` binary to use for blindfolding. If " +
+					"unspecified, the first vesctl binary found in PATH will be used",
+				Optional: true,
 			},
 		},
 	}

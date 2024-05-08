@@ -54,24 +54,31 @@ func (p *f5XCProvider) Metadata(_ context.Context, _ provider.MetadataRequest, r
 
 func (p *f5XCProvider) Schema(_ context.Context, _ provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		Description: "Provides utility resources for working with F5 Distributed Cloud",
 		Attributes: map[string]schema.Attribute{
 			"api_p12_file": schema.StringAttribute{
-				Optional: true,
+				MarkdownDescription: "Path to a PKCS#12 file used to authenticate to F5 Distributed Cloud, can also be set using `VOLT_API_P12_FILE` environment variable.",
+				Optional:            true,
 			},
 			"api_cert": schema.StringAttribute{
-				Optional: true,
+				MarkdownDescription: "Path to a PEM encoded x509 certificate file used to authenticate to F5 Distributed Cloud, can also be set using `VOLT_API_CERT` environment variable.",
+				Optional:            true,
 			},
 			"api_key": schema.StringAttribute{
-				Optional: true,
+				MarkdownDescription: "Path to a PEM encoded x509 key file used to authenticate to F5 Distributed Cloud, can also be set using `VOLT_API_KEY` environment variable.",
+				Optional:            true,
 			},
 			"api_token": schema.StringAttribute{
-				Optional: true,
+				MarkdownDescription: "An API token used to authenticate to F5 Distributed Cloud, can also be set using `VOLTERRA_TOKEN` environment variable.",
+				Optional:            true,
 			},
 			"timeout": schema.StringAttribute{
-				Optional: true,
+				MarkdownDescription: "The timeout to apply when making API requests to F5 Distributed Cloud, can also be set using `VOLT_API_TIMEOUT` environment variable.",
+				Optional:            true,
 			},
 			"url": schema.StringAttribute{
-				Optional: true,
+				MarkdownDescription: "The F5 Distributed Cloud API URL assigned to your tenant, can also be set using `VOLT_API_URL` environment variable.",
+				Optional:            true,
 			},
 		},
 	}

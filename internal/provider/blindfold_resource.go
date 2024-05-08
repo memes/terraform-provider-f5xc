@@ -55,6 +55,9 @@ func (r *blindfoldResource) Metadata(_ context.Context, req resource.MetadataReq
 // policy document. A definitive path to vesctl can be provided as an option.
 func (r *blindfoldResource) Schema(_ context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		MarkdownDescription: "Generates a blindfolded secret from a base64 encoded source string.\n\n" +
+			"NOTE: The Terraform state *will include the unencrypted source value* that was provided " +
+			"through the `plaintext` attribute.",
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				Description: "The computed resource identifier for the blindfolded secret.",
@@ -95,8 +98,9 @@ func (r *blindfoldResource) Schema(_ context.Context, _ resource.SchemaRequest, 
 				},
 			},
 			"vesctl": schema.StringAttribute{
-				Description: "The path to vesctl binary.",
-				Optional:    true,
+				MarkdownDescription: "The path to `vesctl` binary to use for blindfolding. If " +
+					"unspecified, the first vesctl binary found in PATH will be used",
+				Optional: true,
 			},
 		},
 	}

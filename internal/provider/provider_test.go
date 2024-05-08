@@ -7,11 +7,9 @@ import (
 )
 
 const (
+	// The default provider config is left empty so that the provider can use environment variables for configuration.
 	providerConfig = `
-provider "f5xc" {
-  api_token = "invalid"
-  api_url = "https://f5.invalid/api"
-}
+provider "f5xc" {}
 `
 )
 

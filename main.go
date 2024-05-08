@@ -1,5 +1,7 @@
 package main
 
+// Documentation for the provider and resources is generated from source.
+//go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs generate -provider-name f5xc
 import (
 	"context"
 	"flag"
