@@ -6,6 +6,6 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2024)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-Implements a Terraform Provider for experimental F5 Distributed Cloud features not present in F5's published provider.
+Implements a Terraform Provider for experimental F5 Distributed Cloud features not present in F5's published [provider](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
 
-> NOTE: This is not an F5 product, nor is it supported by F5 in any way!
+> DISCLAIMER: This provider is not an official F5, Inc. product and is not endorsed by F5 or covered by any F5 support policy.
