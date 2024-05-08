@@ -43,7 +43,7 @@ jobs:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
       - name: Trigger Go Report update
         if: ${{ success() }}
-        uses: fjogeleit/http-request-action@v1.15.4
+        uses: fjogeleit/http-request-action@v1.15.5
         with:
           url: 'https://goreportcard.com/checks'
           method: 'POST'
