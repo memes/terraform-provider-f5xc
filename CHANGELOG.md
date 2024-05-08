@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.1...v0.1.2) (2024-05-08)
+
+
+### Bug Fixes
+
+* Add provider documentation ([bad19af](https://github.com/memes/terraform-provider-f5xc/commit/bad19afb14f7ba1a81d0fe9c3d8dd175b1b48a0d))
+
 ## [0.1.1](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.0...v0.1.1) (2024-04-05)
 
 
