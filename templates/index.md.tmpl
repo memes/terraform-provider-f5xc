@@ -5,15 +5,19 @@ description: |-
 ---
 # {{ .ProviderShortName | upper }} Provider
 
-The {{ .ProviderShortName }} Provider can. Although the `provider` block attributes are marked as optional, the `url`
-attribute *must* be provided either as a block attribute or through `VOLT_API_URL` environment variable, and one of the
-support authentication options *must* be provided.
+{{ .Description | trimspace }}
+
+> DISCLAIMER: This provider is not an official F5, Inc. product and is not endorsed by F5 or covered by any F5 support
+> policy.
 
 ## Authentication
 
 The {{ .ProviderShortName }} provider requires authentication to the F5 Distributed Cloud API to retreive policies and
 documents, and the URL assigned to your tenant. These values can be explicitly declared in the `provider` block or they
 can be infered from environment variables.
+
+Although the `url` attribute is marked as *optional*, the *base API URL that is assigned to your tenant must be provided
+either as a block attribute or through `VOLT_API_URL` environment variable*.
 
 ### Using PKCS#12 bundle
 

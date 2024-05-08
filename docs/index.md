@@ -1,19 +1,23 @@
 ---
 page_title: "Provider: F5XC"
 description: |-
-    Provides utility resources for working with F5 Distributed Cloud
+    Provides auxiliary resources for working with F5 Distributed Cloud that are not  present in the provider published by F5.
 ---
 # F5XC Provider
 
-The f5xc Provider can. Although the `provider` block attributes are marked as optional, the `url`
-attribute *must* be provided either as a block attribute or through `VOLT_API_URL` environment variable, and one of the
-support authentication options *must* be provided.
+Provides auxiliary resources for working with F5 Distributed Cloud that are not  present in the provider published by F5.
+
+> DISCLAIMER: This provider is not an official F5, Inc. product and is not endorsed by F5 or covered by any F5 support
+> policy.
 
 ## Authentication
 
 The f5xc provider requires authentication to the F5 Distributed Cloud API to retreive policies and
 documents, and the URL assigned to your tenant. These values can be explicitly declared in the `provider` block or they
 can be infered from environment variables.
+
+Although the `url` attribute is marked as *optional*, the *base API URL that is assigned to your tenant must be provided
+either as a block attribute or through `VOLT_API_URL` environment variable*.
 
 ### Using PKCS#12 bundle
 

@@ -54,7 +54,8 @@ func (p *f5XCProvider) Metadata(_ context.Context, _ provider.MetadataRequest, r
 
 func (p *f5XCProvider) Schema(_ context.Context, _ provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
-		Description: "Provides utility resources for working with F5 Distributed Cloud",
+		MarkdownDescription: "Provides auxiliary resources for working with F5 Distributed Cloud that are not " +
+			" present in the provider published by F5.",
 		Attributes: map[string]schema.Attribute{
 			"api_p12_file": schema.StringAttribute{
 				MarkdownDescription: "Path to a PKCS#12 file used to authenticate to F5 Distributed Cloud, can also be set using `VOLT_API_P12_FILE` environment variable.",
