@@ -1,6 +1,6 @@
 # Blindfold an existing JSON Google service account key and register as a Cloud Credential to provision GCP VPC sites.
 
-resource "f5xc_blindfold" "creds" {
+resource "f5xc_blindfold_file" "creds" {
   path = "/path/to/sa.json"
   policy_document = {
     name      = "ves-io-allow-volterra"
@@ -15,7 +15,7 @@ resource "volterra_cloud_credential" "gcp" {
   gcp_cred_file {
     credential_file {
       blindfold_secret_info {
-        location = format("string:///%s", f5xc_blindfold.creds.sealed)
+        location = format("string:///%s", f5xc_blindfold_file.creds.sealed)
       }
     }
   }
