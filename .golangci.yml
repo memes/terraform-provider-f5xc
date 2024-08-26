@@ -11,6 +11,7 @@ linters:
   enable:
     - asciicheck
     - bodyclose
+    - copyloopvar
     - depguard
     - dogsled
     # Disabled by @memes; resources have a lot of boilerplate
@@ -19,7 +20,6 @@ linters:
     - err113
     - errcheck
     - errorlint
-    - exportloopref
     - gochecknoglobals
     - gochecknoinits
     - goconst
