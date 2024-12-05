@@ -148,6 +148,8 @@ github.com/mattn/go-runewidth v0.0.9 h1:Lm995f3rfxdpd6TSmuVCHVb/QhupuXlYr8sCI/Qd
 github.com/mattn/go-runewidth v0.0.9/go.mod h1:H031xJmbD/WCDINGzjvQ9THkh0rPKHF+m2gUSrubnMI=
 github.com/memes/f5xc v1.2.1 h1:9SzVgXYgdD4MYpAYDO8zX+y8lEGSYflgVyB+drdFjpc=
 github.com/memes/f5xc v1.2.1/go.mod h1:bxXNwpo/Mrlke+PWjqJqUpfQUiD7iRAaccydYLCeeeA=
+github.com/memes/f5xc v1.2.2 h1:Chiiy7jDbvXAqhEgAYxWd5S6JUZkaEyjco9HubldvFU=
+github.com/memes/f5xc v1.2.2/go.mod h1:ZYd5x6dx2fE5n6Rc1cUYHlu/W8LF4GYQ90jzQ4Rzb6w=
 github.com/mitchellh/copystructure v1.0.0/go.mod h1:SNtv71yrdKgLRyLFxmLdkAbkKEFWgYaq1OVrnRcwhnw=
 github.com/mitchellh/copystructure v1.2.0 h1:vpKXTN4ewci03Vljg/q9QvCGUDttBOGBIa15WveJJGw=
 github.com/mitchellh/copystructure v1.2.0/go.mod h1:qLl+cE2AmVv+CoeAwDPye/v+N2HKCj9FbZEVFJRxO9s=
