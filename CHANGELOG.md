@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.4...v0.1.5) (2024-12-05)
+
+
+### Miscellaneous Chores
+
+* Release v0.1.5 ([cb738af](https://github.com/memes/terraform-provider-f5xc/commit/cb738afe8d7f0b604808b1bae603cb27173c924e))
+
 ## [0.1.4](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.3...v0.1.4) (2024-12-05)
 
 
