@@ -1,6 +1,6 @@
 module github.com/memes/terraform-provider-f5xc
 
-go 1.22
+go 1.23.4
 
 require (
 	github.com/google/uuid v1.6.0
