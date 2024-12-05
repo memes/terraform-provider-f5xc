@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.4](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.3...v0.1.4) (2024-12-05)
+
+
+### Bug Fixes
+
+* Bump f5xc dependency to v1.2.2 ([f90c4fa](https://github.com/memes/terraform-provider-f5xc/commit/f90c4fa374354b8ac71b5b4a6a302b974814ea9a))
+* Bump go to v1.23 ([e6b2437](https://github.com/memes/terraform-provider-f5xc/commit/e6b2437b7b67ec48beac664b7f6ddf39c3e77c35))
+
 ## [0.1.3](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.2...v0.1.3) (2024-05-08)
 
 
