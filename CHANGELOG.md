@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.5...v0.2.0) (2025-03-19)
+
+
+### Features
+
+* Support VES_P12_CONTENT authentication ([da76594](https://github.com/memes/terraform-provider-f5xc/commit/da7659496fba6acf038ce8cbef40ed60f3f2be83)), closes [#77](https://github.com/memes/terraform-provider-f5xc/issues/77)
+
 ## [0.1.5](https://github.com/memes/terraform-provider-f5xc/compare/v0.1.4...v0.1.5) (2024-12-05)
 
 
