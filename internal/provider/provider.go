@@ -146,6 +146,7 @@ func (p *f5XCProvider) Configure(ctx context.Context, req provider.ConfigureRequ
 		return
 	}
 
+	envP12Content := os.Getenv("VES_P12_CONTENT")
 	apiP12File := os.Getenv("VOLT_API_P12_FILE")
 	apiP12Passphrase := os.Getenv("VES_P12_PASSWORD")
 	apiCert := os.Getenv("VOLT_API_CERT")
@@ -204,8 +205,11 @@ func (p *f5XCProvider) Configure(ctx context.Context, req provider.ConfigureRequ
 	if apiToken != "" {
 		options = append(options, f5xc.WithAuthToken(apiToken))
 	}
+	if envP12Content != "" && apiP12Passphrase != "" {
+		options = append(options, f5xc.WithP12CertificateContent(envP12Content, apiP12Passphrase))
+	}
 	if apiP12File != "" && apiP12Passphrase != "" {
-		options = append(options, f5xc.WithP12Certificate(apiP12File, apiP12Passphrase))
+		options = append(options, f5xc.WithP12CertificateFile(apiP12File, apiP12Passphrase))
 	}
 	if apiCert != "" && apiKey != "" {
 		options = append(options, f5xc.WithCertKeyPair(apiCert, apiKey))

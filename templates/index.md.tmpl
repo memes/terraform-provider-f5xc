@@ -12,9 +12,9 @@ description: |-
 
 ## Authentication
 
-The {{ .ProviderShortName }} provider requires authentication to the F5 Distributed Cloud API to retreive policies and
+The {{ .ProviderShortName }} provider requires authentication to the F5 Distributed Cloud API to retrieve policies and
 documents, and the URL assigned to your tenant. These values can be explicitly declared in the `provider` block or they
-can be infered from environment variables.
+can be inferred from environment variables.
 
 Although the `url` attribute is marked as *optional*, the *base API URL that is assigned to your tenant must be provided
 either as a block attribute or through `VOLT_API_URL` environment variable*.
@@ -22,7 +22,8 @@ either as a block attribute or through `VOLT_API_URL` environment variable*.
 ### Using PKCS#12 bundle
 
 After generating and downloading a [p12] file from F5 Distributed Cloud console the {{ .ProviderShortName }} provider can
-be configured using the `api_p12_file` attribute or `VOLT_API_P12_FILE` environment variable.
+be configured using the `api_p12_file` attribute or `VOLT_API_P12_FILE` environment variable. Alternatively, a base64
+encoded copy of the [p12] file contents can be set in the environment variable `VES_P12_CONTENT`.
 
 NOTE: To avoid disclosing the passphrase accidentally the provider requires that `VES_P12_PASSWORD` environment variable
 contains the passphrase to unlock the PKCS#12 certificate.
