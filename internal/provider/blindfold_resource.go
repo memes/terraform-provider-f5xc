@@ -41,6 +41,7 @@ type blindfoldResourceModel struct {
 	Vesctl         types.String        `tfsdk:"vesctl"`
 }
 
+// NewBlindfoldResource creates a new blindfold Terraform resource and returns a pointer to it.
 func NewBlindfoldResource() resource.Resource {
 	return &blindfoldResource{}
 }

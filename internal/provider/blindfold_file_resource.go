@@ -1,3 +1,4 @@
+// Package provider implements the required methods and interfaces for F5XC Terraform provider.
 package provider
 
 import (
@@ -37,6 +38,7 @@ type blindfoldFileResourceModel struct {
 	Vesctl         types.String        `tfsdk:"vesctl"`
 }
 
+// NewBlindfoldFileResource creates a new blindfold file Terraform resource and returns a pointer to it.
 func NewBlindfoldFileResource() resource.Resource {
 	return &blindfoldFileResource{}
 }

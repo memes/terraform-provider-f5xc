@@ -1,6 +1,7 @@
 package provider_test
 
 import (
+	"errors"
 	"os"
 	"testing"
 
@@ -14,7 +15,11 @@ func TestAccBlindfoldFileResource(t *testing.T) {
 	if err != nil {
 		t.Errorf("failed to create temporary plaintext file: %v", err)
 	}
-	defer tmpFile.Close()
+	defer func() {
+		if err := tmpFile.Close(); err != nil && !errors.Is(err, os.ErrClosed) {
+			t.Errorf("error closing tmpFile: %v", err)
+		}
+	}()
 	if _, err = tmpFile.Write([]byte("This is a plaintext document to be blindfolded")); err != nil {
 		t.Errorf("failed to write data to plaintext file: %v", err)
 	}
