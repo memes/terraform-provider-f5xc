@@ -1,3 +1,4 @@
+// Main package provides an entrypoint to the Terraform provider.
 package main
 
 // Documentation for the provider and resources is generated from source.

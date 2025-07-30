@@ -2,6 +2,7 @@
 .envrc
 .direnv
 .tool-versions
+.env
 
 # Ignore generated Gorelease binaries
 dist/

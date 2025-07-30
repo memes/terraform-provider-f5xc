@@ -38,7 +38,7 @@ type f5XCProviderModel struct {
 	URL        types.String `tfsdk:"url"`
 }
 
-// Create a new provider.
+// New returns a function to create an F5XC Terraform provider matching the supplied version.
 func New(version string) func() provider.Provider {
 	return func() provider.Provider {
 		return &f5XCProvider{
